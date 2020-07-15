@@ -1,0 +1,65 @@
+GOAL:
+- Online Store with Products and People (Users) who can buy products. - Ecommerce Store Clone
+Features:
+- Home Page with Products and Categories
+- Detail Page for each Product
+- Shopping Cart
+- Checkout Page with Payment
+- User Auth (Register, Login, Profile View)
+- Products and Categories
+- Protected Views / Permissions - Guest and User see and can do different things
+- Contact Page
+- Product Reviews + Recomendation system
+- Q&A Page
+- Privacy Page
+- Filter / Search functionality
+- Fake Data Generator
+
+*additional features::
+- reports
+
+Technologies:
+- Django + SqlLite + BASIC FRONTEND (BOOTSTRAP) + crispy forms - https://startbootstrap.com/templates/ecommerce/
+
+Steps:
+1.Create Github Repository, venv and .gitignore,
+2. Install Django and create project!
+3. Create apps - users / products / orders
+4. create models (plan database) !!!!!!!!!!!!!:
+    4.1 Products app models:
+        - Product:
+            - name
+            - category (FK to Category)
+            - description
+            - photo
+            - price
+
+        - Category:
+            - name
+
+        - Review:
+            - user
+            - rating
+            - comment
+            - date_posted
+            - product
+
+    4.2 Orders app models:
+        - SinglePartOfOrder:
+            - product
+            - quantity_of_product
+            - full_order (FK to FullOrder) - please doublecheck!!!
+        - FullOrder:
+            - user
+            - date
+
+
+5. Views and Templates....
+    5.1 Homepage with Category and Product Listing (views, templates and urls)
+    5.2 Detail Page for Product
+    5.3 User Registration and Login and Detail
+    5.4 Cart implementation
+    5.5 Filters and Search and Sort implementation and Dummy Data Script Generator
+    5.6 Checkout page
+    5.7 User Detail History of orders
+    5.8 About / Privacy etc
